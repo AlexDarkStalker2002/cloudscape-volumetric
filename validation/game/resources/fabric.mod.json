@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "id": "cloudscape_validation",
+  "version": "1.0.0",
+  "name": "Cloudscape Development Validation",
+  "environment": "client",
+  "mixins": ["cloudscape-validation.mixins.json"],
+  "depends": { "fabricloader": ">=0.19.5", "minecraft": "26.3" }
+}

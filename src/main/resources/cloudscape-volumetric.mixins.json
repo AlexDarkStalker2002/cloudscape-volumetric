@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "dev.cloudscape.volumetric.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "IncludeGraphMixin",
+    "ShaderSourceDiscoveryMixin",
+    "ShaderPropertiesMixin",
+    "CompositeRendererComputeReuseMixin",
+    "ComputeDispatchReuseMixin",
+    "RenderTargetsReuseMixin",
+    "OptionsScreenMixin",
+    "IrisLifecycleMixin",
+    "WorldLeaveMixin",
+    "WeatherTickMixin",
+    "WeatherUniformMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

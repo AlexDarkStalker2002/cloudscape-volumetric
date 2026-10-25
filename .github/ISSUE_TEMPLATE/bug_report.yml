@@ -1,0 +1,41 @@
+name: Bug report
+description: Report a reproducible Cloudscape problem / Сообщить об ошибке
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is an experimental RC. Remove tokens, account details and private server addresses from logs before sharing them. English and Russian reports are welcome.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened? / Что произошло?
+      description: Include expected and actual behavior, plus exact reproduction steps.
+    validations:
+      required: true
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions / Версии
+      description: Cloudscape JAR, Minecraft, Java, loader, Iris, Sodium, Complementary, DH and other relevant mods.
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware and settings / Оборудование и настройки
+      description: OS, GPU, driver, VRAM. For FPS include resolution, VSync/cap, sample counts, atlas and view distances.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / Материалы
+      description: Screenshots/video, sanitized latest.log and config, and hs_err log if one was generated. Include weather, dimension and camera location when relevant.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed private information and authentication tokens from attachments.
+          required: true

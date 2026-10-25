@@ -1,0 +1,17 @@
+/build/
+/validation-game/
+/archive/
+/experiments/
+/dist/
+/third_party/
+/logs/
+/research/
+/publishing/
+*.log
+hs_err_pid*
+*.dmp
+*.hprof
+*.jfr
+*.jar
+.env
+.env.*

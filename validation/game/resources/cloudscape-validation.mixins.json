@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "package": "dev.cloudscape.validation.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "ValidationMixin",
+    "FrameMetricsMixin",
+    "CompositeMetricsMixin",
+    "PipelineSpanMetricsMixin",
+    "DhSpanMetricsMixin",
+    "TargetLifecycleProbeMixin",
+    "ValidationFrameMixin",
+    "BenchmarkThrottleMixin",
+    "WindUniformProbeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

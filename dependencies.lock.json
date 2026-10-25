@@ -1,0 +1,421 @@
+{
+  "minecraft": "26.3",
+  "java": 25,
+  "dependencies": [
+    {
+      "base": "minecraft",
+      "path": "libraries/at/yawk/lz4/lz4-java/1.10.1/lz4-java-1.10.1.jar",
+      "sha256": "A58A84C4271E50DF4C96ED916CCB7E48A869F8ED9CDCDA1AD5D3D4C33B0214A3"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/azure/azure-json/1.4.0/azure-json-1.4.0.jar",
+      "sha256": "C50BC998CD1A6C689F8644B51C206217BF2DA09D5B949E777490A60290CC3A0D"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/github/oshi/oshi-core/6.9.0/oshi-core-6.9.0.jar",
+      "sha256": "B29BA9BCE041E6EA822203D5B5A692660C87551241510EBC76EEDFFE684844C7"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/google/code/gson/gson/2.14.0/gson-2.14.0.jar",
+      "sha256": "2CBD119BF1961C28788310963DC80BA65F58CDEEC1DD139C8BDB1240FAA2C36F"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar",
+      "sha256": "CBFC3906B19B8F55DD7CFD6DFE0AA4532E834250D7F080BD8D211A3E246B59CB"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/google/guava/guava/33.6.0-jre/guava-33.6.0-jre.jar",
+      "sha256": "DC573E1FCA4FD5454F4A5FD3D7DA2DF03002876A4175BAFC14A95980DD7713B3"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/ibm/icu/icu4j/78.3/icu4j-78.3.jar",
+      "sha256": "E962C1758D9659EA1E1FBAB99C58683F654D304E1126ACE19AAABFE39E0EDB25"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/microsoft/azure/msal4j/1.24.1/msal4j-1.24.1.jar",
+      "sha256": "12E62F79D1A71D176A41C168C0587F8167F0ADD99B78F006F39595BD7242AEBE"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/authlib/10.0.77/authlib-10.0.77.jar",
+      "sha256": "521672866582633A412C82171D3CFA416ECACCDF05A43BAF809C16F9AEC07068"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/blocklist/1.0.10/blocklist-1.0.10.jar",
+      "sha256": "830BFD639C8DB49236BBD8E45D3A2B8C96C56FF654A10118654958A6235D4C44"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/brigadier/1.3.11/brigadier-1.3.11.jar",
+      "sha256": "9D09CF4819DE83DFCD38BCB212D5F2227131791CEF3ABBFCA3321D6FB2B9A64D"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/datafixerupper/10.0.21/datafixerupper-10.0.21.jar",
+      "sha256": "3547CB1DA8993FB7EBD42494D0E78997D2CFBE90C421F5EFD022863E6909941E"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/jtracy/1.14.38/jtracy-1.14.38.jar",
+      "sha256": "721BFF502A9664D689D781AB7BFED19330606C2E1EF6B8E4D59FBA67E7E765DA"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/jtracy/1.14.38/jtracy-1.14.38-natives-windows.jar",
+      "sha256": "EA4B4BA6EAC3C4DCC88E517F05F6A62EBBA64C88604F36FCD7FBEED5433260DB"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/logging/1.7.12/logging-1.7.12.jar",
+      "sha256": "3C7AC9742FA98C773275379EB1046C048B5D2EE989152A8C69E7BA696C3F8538"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/patchy/2.2.10/patchy-2.2.10.jar",
+      "sha256": "16D70E7968B45CAFFC81576268EB000F473FB60BF257182D3447DEA8EC919D5A"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/com/mojang/text2speech/1.19.12/text2speech-1.19.12.jar",
+      "sha256": "63769A6F662AD8943ADF6BE14A45E375D76A567D7BA50C2A7F1F95082C93B816"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/commons-codec/commons-codec/1.22.0/commons-codec-1.22.0.jar",
+      "sha256": "D164FE79F262C32D9B18A0B5B2D317D1C27653D5E98FD2B998C24BF901C72CE4"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/commons-io/commons-io/2.20.0/commons-io-2.20.0.jar",
+      "sha256": "DF90BBA0FE3CB586B7F164E78FE8F8F4DA3F2DD5C27FA645F888100CCC25DD72"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-buffer/4.2.16.Final/netty-buffer-4.2.16.Final.jar",
+      "sha256": "CC36AE9FBD0B03FE755EB4EB4424CA53B59CFD297D7FD47D49E5B1059BEDED6C"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-codec-base/4.2.16.Final/netty-codec-base-4.2.16.Final.jar",
+      "sha256": "FEB410225938D9970DE6B624A0C031D079804FA5CC5E1EC6E9298F16DB5998A7"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-codec-compression/4.2.16.Final/netty-codec-compression-4.2.16.Final.jar",
+      "sha256": "13C8565414DD2115281303EF4AD1F7CC69BD7771D8D12C7D2FB31307DFF26D11"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-codec-http/4.2.16.Final/netty-codec-http-4.2.16.Final.jar",
+      "sha256": "0D16F981DE8D0D304A2AB1A81F0A674892089FBAA8A583100AEBB4A5B00456EC"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-common/4.2.16.Final/netty-common-4.2.16.Final.jar",
+      "sha256": "9825EE68A0DC4CD2B53E2F532502401B2211BAD9B77E8B04882D9E64487283FF"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-handler/4.2.16.Final/netty-handler-4.2.16.Final.jar",
+      "sha256": "A259CA496DA05AC1981F95CD856211F894A328056A6129E9CD70DBBD5DF401F7"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-resolver/4.2.16.Final/netty-resolver-4.2.16.Final.jar",
+      "sha256": "C9ECA6A99036485CF1D186B4A6A595B0A54C53808319EE03924270EAE04C32BB"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-transport-classes-epoll/4.2.16.Final/netty-transport-classes-epoll-4.2.16.Final.jar",
+      "sha256": "9F2B53210DB9C8D24E787ED43F3896AAF30D686ED270C7AFBB29AB6330C6AA23"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-transport-classes-kqueue/4.2.16.Final/netty-transport-classes-kqueue-4.2.16.Final.jar",
+      "sha256": "6599B495F69420CB240AB0A1AA60A19A2DF3BC72791729170E0993727637A689"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-transport-native-unix-common/4.2.16.Final/netty-transport-native-unix-common-4.2.16.Final.jar",
+      "sha256": "41CA8FE192083D17917BE7DDCECDED4DA4FC1DB1D1656D03D0BCB14E2F431155"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/io/netty/netty-transport/4.2.16.Final/netty-transport-4.2.16.Final.jar",
+      "sha256": "CFA3F654CAFF906653385F4B7DDAA539D795B78F5711A622482B17D2B73484C0"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/it/unimi/dsi/fastutil/8.5.18/fastutil-8.5.18.jar",
+      "sha256": "9094AE67D01D0AD246F886F11AD557FC2E79C72CBF3FEED83E1512A8AE90A74A"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/net/java/dev/jna/jna-platform/5.17.0/jna-platform-5.17.0.jar",
+      "sha256": "B7E3D46C87BAD2EB409B0E704916BCD81206168E357312DFDDD0E253679CD9E0"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/net/java/dev/jna/jna/5.17.0/jna-5.17.0.jar",
+      "sha256": "B3A9408E7C51E08EF0E3BFCC08F443F6EC0F6191BA8CD7C18D53D2B22E5BDBC0"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/net/sf/jopt-simple/jopt-simple/5.0.4/jopt-simple-5.0.4.jar",
+      "sha256": "DF26CC58F235F477DB07F753BA5A3AB243EBE5789D9F89ECF68DD62EA9A66C28"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+      "sha256": "E1522945218456F3649A39BC4AFD70CE4BD466221519DBA7D378F2141A4642CA"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/apache/commons/commons-lang3/3.20.0/commons-lang3-3.20.0.jar",
+      "sha256": "69E5C9FA35DA7A51A5FD2099DFE56A2D8D32CF233E2F6D770E796146440263F4"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/apache/logging/log4j/log4j-api/2.26.0/log4j-api-2.26.0.jar",
+      "sha256": "820DE7BBAF430EAF2E3E5CCB92F23E2085797C5AC4D4F7FC6C8B660FBEFA1DBC"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/apache/logging/log4j/log4j-core/2.26.0/log4j-core-2.26.0.jar",
+      "sha256": "406BB3132C47A5D322E5C571FEB0787CA84496469F346EB51F1EF2EE45499902"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/apache/logging/log4j/log4j-slf4j2-impl/2.26.0/log4j-slf4j2-impl-2.26.0.jar",
+      "sha256": "CFC1BDDBD39E684B698AE968291D8A3B3A55EE0EC2EF3D3EA5C2336A9E151598"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/jcraft/jorbis/0.0.17/jorbis-0.0.17.jar",
+      "sha256": "E067F29A3701426B67ED973036949C6E58CA5BB53EEF7240B2E71E286D252A9E"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/joml/joml/1.10.9/joml-1.10.9.jar",
+      "sha256": "FECA4DB853371704338621C120ACC5CC32300D8AF635FA42414B6213301E216B"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar",
+      "sha256": "1FAD6E6BE7557781E4D33729D49AE1CDC8FDDA6FE477BB0CC68CE351EAFDFBAB"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-freetype/3.4.3/lwjgl-freetype-3.4.3.jar",
+      "sha256": "B331B9D2A29C1B330C3887D33C14DAB9D7EED3F763BB8F5CA559EEC02D73F075"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-freetype/3.4.3/lwjgl-freetype-3.4.3-natives-windows.jar",
+      "sha256": "48D4DC7D932D0D6F975B8538FDD21961C6DE19190C8060FB997211C400D14676"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-freetype/3.4.3/lwjgl-freetype-3.4.3-natives-windows-arm64.jar",
+      "sha256": "42DBD9DB7B6878CD3DF0CBE23D5751694BF3D2869760D16FEF4CF8EA4F60AB59"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3.jar",
+      "sha256": "F34062B6489454F7E2C3BF5979E37667E62C7C85CD00F73760F441557CB1978A"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-windows.jar",
+      "sha256": "612EB52B8780C9307908FB535A581CC49914C3CDC328E49002857A2962BD7501"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-jemalloc/3.4.3/lwjgl-jemalloc-3.4.3-natives-windows-arm64.jar",
+      "sha256": "1AF53E5B207EA91188B7C6914A614B86AA0AD9F38AF02ECF9DFDE7257C201537"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3.jar",
+      "sha256": "4A0049C8554D6890718FEE76507572F2F9F8F3F6144D25D7D2EA76BCCC2D9605"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-windows.jar",
+      "sha256": "2D48D9AB49BADD70A2AF9A5299F7B337F4813DEF20D4216F456A8B49DBE00824"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-openal/3.4.3/lwjgl-openal-3.4.3-natives-windows-arm64.jar",
+      "sha256": "726E3D8AB9EC0CFCAAEF3AEFAE64E0F30DDB8F1AD73231418A17F42BE52BFB74"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3.jar",
+      "sha256": "A92CF30F25B6FB6066F3508511F83C5C4FE2A0CFF14FC2E7373BC1F6C726374F"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-windows.jar",
+      "sha256": "0E082B9203CA4112C740735789CC4DD9DCAF2032212B64BA9089AC7DCA035A40"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-opengl/3.4.3/lwjgl-opengl-3.4.3-natives-windows-arm64.jar",
+      "sha256": "4F2772DE7FDF469B3EFBAEB8DAAE3429DA46F6B67DB33290B101CEB683D19AAC"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3.jar",
+      "sha256": "DCB33ABCBD946553176BB668BE80D7ADC60CB9D919AB5C71FB01FC51CACC4C8F"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-windows.jar",
+      "sha256": "0C76C67FB12C8AB1C88BC89BF9F87FABB313D2B4D735B274F1267F71DF3613AD"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-sdl/3.4.3/lwjgl-sdl-3.4.3-natives-windows-arm64.jar",
+      "sha256": "3BAE382B9B84E773A63A66994535BC6362ED7E45D2843D45D24AA8751851D8B4"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3.jar",
+      "sha256": "82C7B5270D2C78458F5720C639459710C8F086CA050EEA9AB0C44256FEE7A626"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-windows.jar",
+      "sha256": "E8E631D007B36EDF1440CB4D42654A9B5C03BCB91B9C333C6A81EC6A3911F8BC"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-shaderc/3.4.3/lwjgl-shaderc-3.4.3-natives-windows-arm64.jar",
+      "sha256": "2413E18FA5A76BE7A3EC43318CDB8652113A4E3B686A36490C0D73F349646522"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3.jar",
+      "sha256": "D737EBA8512CAA2F53DB7A8DBEA4C08D9C3D94493BB0A244E6D64AF95541F742"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-windows.jar",
+      "sha256": "9C88232DF7D4612F59D363577910837C28F922D297191F3DFEDD35C91122A24B"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-spvc/3.4.3/lwjgl-spvc-3.4.3-natives-windows-arm64.jar",
+      "sha256": "414A69C51F97310F15583731EFB5A42B5D9997202C6E5B9B763122AC137A0DDA"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3.jar",
+      "sha256": "544753F5E49C53580949B9F1FC341F0E434991303C93D5A428FBAAFAACC2CD69"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-windows.jar",
+      "sha256": "28DC585F78F577C9773078BD7545D3E97700DFAA2F440C2E31F286321E26063D"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-stb/3.4.3/lwjgl-stb-3.4.3-natives-windows-arm64.jar",
+      "sha256": "6E95A7E96B4D6D338F716A69C485BF107C1CE4CF3DB0CB3B26BBC5EBC10298C7"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3.jar",
+      "sha256": "254162EF94BD213663A417368902EA916D51E0E0FA3054D07EA0CE9A8B7AC9E6"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-windows.jar",
+      "sha256": "E57995E6D7C2C6F6A3451AA626085AA344FFD161D2C6BD406DE92C9DF7260CFF"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-vma/3.4.3/lwjgl-vma-3.4.3-natives-windows-arm64.jar",
+      "sha256": "D2251122274C9B962FC08AA1B5633E9EE4DD4C84316171E72A41B550732FD19F"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl-vulkan/3.4.3/lwjgl-vulkan-3.4.3.jar",
+      "sha256": "ACDB40767775ED1223DC3B2A8C9D3CE740C9E3C4AF074444CE2DFE2EA9BA62E0"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3.jar",
+      "sha256": "46EECA5471833C3CF5DA3C1DA015B41E3BB3EB16DD3DA03F366886DA10096751"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-windows.jar",
+      "sha256": "19949BCA7B780F55E5D2DB12AC061A7657A4C1B7C860C30607F5406E7017AA2B"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/lwjgl/lwjgl/3.4.3/lwjgl-3.4.3-natives-windows-arm64.jar",
+      "sha256": "F04A803B8516B97E61EAC1A66BB74BBA483A684713D5462EE5F107DD63443D4F"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar",
+      "sha256": "7B751D952061954D5ABFED7181C1F645D336091B679891591D63329C622EB832"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/ow2/asm/asm/9.10.1/asm-9.10.1.jar",
+      "sha256": "ED825D10AB1399C8C0CB669E688CF0C8C82629B4C8399B58352B68E92CA10FCB"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/ow2/asm/asm-analysis/9.10.1/asm-analysis-9.10.1.jar",
+      "sha256": "DEDE75A21306B65974ECD8F87114FF6970F09FB794157A4CA09AB25C888C2BFC"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/ow2/asm/asm-commons/9.10.1/asm-commons-9.10.1.jar",
+      "sha256": "6D0ABEFB7CBF972EA16EDB37EC14835372505063A45F976AB7EA889ED9497895"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/ow2/asm/asm-tree/9.10.1/asm-tree-9.10.1.jar",
+      "sha256": "3DFB0D5B6A106CD40B5B250E39935FBF2F927F4477546A5369A3AC609CF0506B"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/org/ow2/asm/asm-util/9.10.1/asm-util-9.10.1.jar",
+      "sha256": "1BB99D091FBA2597DC6D51193E9BBCF0D8447E7ED96BD8F0198B18152F09655C"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/net/fabricmc/sponge-mixin/0.17.4+mixin.0.8.7/sponge-mixin-0.17.4+mixin.0.8.7.jar",
+      "sha256": "1F0AE44DB7295F8626F33B1DC0AD7F043D8954A8D6847247875FCC5DFCECC934"
+    },
+    {
+      "base": "minecraft",
+      "path": "libraries/net/fabricmc/fabric-loader/0.19.5/fabric-loader-0.19.5.jar",
+      "sha256": "93044E4DD46DE5D8136701292F05E868DA096D2C9FDDB4793E4FDBCC63EFC695"
+    },
+    {
+      "base": "profile",
+      "path": "Cloudscape 26.3.jar",
+      "sha256": "4508D006323F24FA02876310C192D739AF56516EB259000AC50F0909A68C9A2D"
+    },
+    {
+      "base": "profile",
+      "path": "mods/iris-fabric-1.11.7+mc26.3.jar",
+      "sha256": "83AB4D3013DD56AC05AE503A2F596968911001C4EF3D82C59C5C79E64C34DD98"
+    }
+  ]
+}

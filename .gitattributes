@@ -1,0 +1,4 @@
+# Preserve accepted source/resource bytes in every source snapshot and checkout.
+* -text
+*.png binary
+*.jpg binary

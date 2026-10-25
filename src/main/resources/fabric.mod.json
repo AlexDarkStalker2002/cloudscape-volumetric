@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "cloudscape_volumetric",
+  "version": "0.5.7-rc.1",
+  "name": "Cloudscape Volumetric",
+  "description": "Full-resolution clouds with exact density reuse, in-game settings and transactional configuration.",
+  "environment": "client",
+  "authors": [
+    "Cloudscape"
+  ],
+  "license": "MIT",
+  "entrypoints": {
+    "client": [
+      "dev.cloudscape.volumetric.CloudscapeClient"
+    ]
+  },
+  "mixins": [
+    "cloudscape-volumetric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "26.3",
+    "java": ">=25",
+    "iris": "1.11.7+mc26.3"
+  }
+}
