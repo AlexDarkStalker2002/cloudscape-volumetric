@@ -10,7 +10,7 @@ files=[]
 for name in ['src','validation','tools','docs','presets','.github']:
     files.extend(p for p in (root/name).rglob('*') if p.is_file() and '__pycache__' not in p.parts)
 for name in ['build.ps1','check.ps1','validate-game.ps1','install.ps1','restore.ps1','package.ps1',
-             'README.md','README.en.md','CHANGELOG.md','LICENSE','AGENTS.md','dependencies.lock.json','.gitignore','.gitattributes']:
+             'README.md','README.en.md','README.ru.md','CHANGELOG.md','LICENSE','AGENTS.md','dependencies.lock.json','.gitignore','.gitattributes']:
     files.append(root/name)
 for p in files:
     if p.suffix.lower() in {'.jar','.class','.zip','.dat','.mca','.dll','.exe'}:

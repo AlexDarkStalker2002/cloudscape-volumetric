@@ -12,7 +12,7 @@ foreach($source in $manifest.source){
 if(-not $Destination){$Destination=Join-Path $PSScriptRoot ('dist/'+$manifest.version)}
 if(Test-Path -LiteralPath $Destination){throw 'Use a new destination; preserve earlier distributions'}
 New-Item -ItemType Directory -Path $Destination|Out-Null
-Copy-Item -LiteralPath $jar,(Join-Path $PSScriptRoot 'LICENSE'),(Join-Path $PSScriptRoot 'README.md'),(Join-Path $PSScriptRoot 'README.en.md'),(Join-Path $PSScriptRoot 'CHANGELOG.md'),(Join-Path $PSScriptRoot 'install.ps1'),(Join-Path $PSScriptRoot 'restore.ps1') -Destination $Destination
+Copy-Item -LiteralPath $jar,(Join-Path $PSScriptRoot 'LICENSE'),(Join-Path $PSScriptRoot 'README.md'),(Join-Path $PSScriptRoot 'README.en.md'),(Join-Path $PSScriptRoot 'README.ru.md'),(Join-Path $PSScriptRoot 'CHANGELOG.md'),(Join-Path $PSScriptRoot 'install.ps1'),(Join-Path $PSScriptRoot 'restore.ps1') -Destination $Destination
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'docs'),(Join-Path $PSScriptRoot 'presets') -Destination $Destination -Recurse
 Copy-Item -LiteralPath $AcceptanceFile -Destination (Join-Path $Destination 'acceptance.json')
 $items=@(Get-ChildItem -LiteralPath $Destination -File -Recurse|Sort-Object FullName|ForEach-Object {@{path=[IO.Path]::GetRelativePath([IO.Path]::GetFullPath($Destination),$_.FullName).Replace('\','/');sha256=(Get-FileHash -LiteralPath $_.FullName -Algorithm SHA256).Hash;bytes=$_.Length}})

@@ -1,128 +1,92 @@
-# Cloudscape Volumetric 0.5.7-rc.1
+# Cloudscape Volumetric
 
-[English documentation](README.en.md)
+Volumetric, voxel-shaped clouds with adjustable wind and gradual cloud-cover changes for **Minecraft Java 26.3 / Fabric / Iris / Complementary Reimagined**.
 
-Кандидат первого публичного beta-релиза. Клиентские объёмные облака для
-Minecraft 26.3 / Fabric / Iris / Complementary. Кубические формы, плавное
-изменение облачности, ветер, освещение, облачные тени и отражения.
+**Experimental release candidate: 0.5.7-rc.1.** Frame-time acceptance is incomplete; this repository is a public source snapshot, not an announcement of a stable release. The current cloud shapes, edge clarity and rendering quality are frozen from the accepted `0.5.7-sharp.1` baseline.
 
-Рендер этой версии совпадает с принятой 0.5.7-sharp.1: текущие формы,
-чёткость нижних граней и качество сохранены. Облака не являются блоками мира.
+[Русская инструкция](README.ru.md) · [Acceptance results](docs/ACCEPTANCE.md) · [Development](docs/DEVELOPMENT.md)
 
-## Установка
+![Voxel-shaped clouds at sunset, captured in Minecraft with Cloudscape, Complementary Reimagined and Distant Horizons](docs/images/01-sunset.png)
 
-1. Установите Minecraft **26.3**, Java **25**, Fabric Loader **0.19.5**,
-   Iris **1.11.7+mc26.3** и Sodium **0.9.2+mc26.3**. Это проверенная связка;
-   совместимость с другими версиями не заявляется.
-   Используйте штатные JVM-параметры версии Minecraft: в частности,
-   `-XX:StackShadowPages=32` из её version.json. Обычный лаунчер подставляет их
-   автоматически; ручной запуск должен их сохранять.
-2. Отдельно установите оригинальный Complementary Reimagined **r5.9.3**.
-   Сохраните исходное имя ZIP и выберите его в Iris.
-3. При закрытой игре сохраните старый Cloudscape JAR и
-   `config/cloudscape-volumetric.json`. Положите новый JAR в `mods`;
-   в папке должен остаться ровно один Cloudscape JAR.
-4. Iris → настройки шейдерпака → облака: стиль **Reimagined / 1**,
-   высота **256**, качество **3**, облачные тени включены.
-5. Настройки → **Cloudscape** → Погода → Формы: **Разнообразные формы**;
-   изменение погоды включено. Нажмите «Применить».
+## Features
 
-Существующая конфигурация сохраняется. В новой установке по умолчанию выбран
-Classic; разнообразные формы включаются явно на шаге 5. Unbound r5.9.3
-поддерживается отдельным прежним реалистичным рендером; новые кубические формы
-относятся к стилю Reimagined.
+- Volumetric cubic clouds with varied formations and visible depth from below, above and inside the layer.
+- Gradual transitions between clear, partly cloudy and overcast periods, influenced by Minecraft rain and thunder.
+- Independently adjustable wind and shape evolution. Wind 0 stops cloud drift.
+- Cloud lighting, shadows and reflections integrated with the supported Complementary pipeline.
+- In-game configuration with apply/cancel, preserved existing settings and weather-phase persistence on a normal world exit.
+- English and Russian menus, settings and diagnostics, following the selected Minecraft language.
 
-`presets/reference-look.json` содержит точные настройки принятого внешнего вида:
-192 / 64 / 8 выборок, воксель 16, дальность 6000, атлас 4096, ветер 4,
-изменение погоды и переход 120 секунд. Это необязательный пример для установки
-в отдельный профиль, а не автоматическая замена пользовательского конфига.
+Cloudscape is client-side. It adds visual clouds, not cloud blocks or a sky dimension. Cloud weather is calculated locally; synchronization between players is not guaranteed.
 
-Для установки скриптом используйте `install.ps1 -Profile ... -Jar ...
--ExpectedSHA256 ... -BackupRoot ...`; SHA256 берётся из manifest дистрибутива.
-Каталог резервных копий должен находиться вне игрового профиля. Скрипт сохраняет
-предыдущий JAR/конфиг и создаёт `Restore.ps1`; проверка копии — `-ValidateOnly`.
-Обычный запуск Restore при закрытой игре возвращает предыдущие JAR/конфиг,
-сохраняя заменяемые файлы в undo. Более новая фаза погоды остаётся на месте.
+## Tested setup
 
-## Настройки и погода
+| Component | Version |
+| --- | --- |
+| Minecraft Java Edition | 26.3 |
+| Java | 25 |
+| Fabric Loader | 0.19.5 |
+| Iris | 1.11.7+mc26.3, Fabric |
+| Sodium | 0.9.2+mc26.3, Fabric |
+| Complementary Reimagined | r5.9.3 |
+| Distant Horizons, optional | 3.3.4 |
 
-Экран Cloudscape содержит художественные параметры, качество и диагностику.
-Интерфейс поддерживает русский и английский языки: 96 строк в каждой локализации;
-язык меню и диагностики выбирается по языку Minecraft.
-«Применить» проверяет загрузку шейдера и атомарно сохраняет конфиг; при ошибке
-восстанавливаются предыдущие параметры. Esc/«Отмена» отбрасывают черновик.
-«Сбросить» меняет только черновик до применения.
+Only this combination is claimed as tested. Fabric API, Mod Menu, Better Clouds and Lithium are not separate required dependencies of Cloudscape. Unbound r5.9.3 uses a separate legacy realistic rendering path; the varied cubic clouds shown here belong to Reimagined. Other shader packs, game versions and loaders are not claimed as supported.
 
-Разнообразные формы чередуют ясные, переменные и густо облачные периоды.
-Новая цель облачности выбирается примерно каждые 15 минут симуляции, переходы
-сглажены. Дождь и гроза Minecraft учитываются. Ветер и изменение формы
-настраиваются независимо; ветер 0 останавливает перенос.
-Фаза сохраняется при штатном выходе из мира. Аварийное завершение может
-потерять изменение фазы после последнего сохранения. Погода вычисляется
-локально на клиенте; синхронизация облаков между игроками не обещается.
+## Installation
 
-Чтение конфига не перезаписывает его. Старые настройки мигрируют в памяти;
-запись и резервная копия появляются при успешном применении. Неизвестные поля
-сохраняются. Конфиг более новой схемы защищён от записи старой версией.
+There is no stable release announced yet. Use a separately built candidate in a test profile, and keep your previous JAR and configuration for rollback.
 
-## Совместимость и ограничения
+1. Install the tested setup above. Preserve Minecraft's standard JVM arguments, including `-XX:StackShadowPages=32` from the version manifest. Normal launchers provide these automatically.
+2. Obtain the original **Complementary Reimagined r5.9.3** separately, retain its original ZIP filename and select it in Iris.
+3. With Minecraft closed, back up the old Cloudscape JAR and `config/cloudscape-volumetric.json`. Put the candidate JAR in `mods`, keeping exactly one Cloudscape JAR.
+4. In the shader pack's cloud settings, select **Reimagined / style 1**, cloud height **256**, quality **3**, with cloud shadows enabled.
+5. Open **Options → Cloudscape → Weather**, set **Shapes: Varied shapes**, enable **Weather variation** and press **Apply**.
 
-Это адаптер проверенного интерфейса Complementary, а не универсальная замена
-облаков во всех шейдерпаках. При неподдержанном исходном интерфейсе остаются
-облака пака, а диагностика сообщает, что Cloudscape неактивен. ZIP пака не меняется.
+**A clean installation starts in Classic. Step 5 is required for the varied shapes and changing cloud cover shown here.** Existing configuration is preserved. If Better Clouds is installed, disable its cloud replacement (`cloudOverride=false`).
 
-Текущая аппаратная проверка: Windows, NVIDIA RTX 5070, 2560×1440.
-Distant Horizons 3.3.4 входит в проверяемую связку; другие LOD-моды не заявлены.
-Fabric API 0.163.0+26.3 и Lithium 0.26.2 были в локальном тестовом профиле.
-Mod Menu и Better Clouds не являются обязательными зависимостями Cloudscape.
-Если установлен Better Clouds, отключите его замену облаков (`cloudOverride=false`).
+The optional [reference configuration](presets/reference-look.json) uses 192/64/8 view/reflection/light samples, voxel 16, range 6000, atlas 4096, wind 4 and a 120-second weather transition. It is a visual reference, not a mandatory preset for every GPU.
 
-Атлас 4096 занимает **1 ГиБ видеопамяти** на пару изображений Iris;
-1536 — **144 МиБ**. Это только атлас, без остальных ресурсов игры/шейдера.
-Запрошенный и эффективный размеры показаны в диагностике. При ограничениях
-формата/размера используется предусмотренный запасной путь расчёта.
-Высокий FPS на всех GPU не гарантируется; густые виды изнутри особенно дороги.
-Исторические нативные сбои Java/OpenGL не объявляются устранёнными.
+For a scripted install, use `install.ps1 -Profile ... -Jar ... -ExpectedSHA256 ... -BackupRoot ...`. The backup directory must be outside the game profile. The generated `Restore.ps1 -ValidateOnly` validates the backup without changing files. Normal restoration requires a closed client and preserves replaced files in an undo directory. More recent weather-phase data is not automatically rolled back.
 
-Актуальный статус приёмки и исходные измерения: [docs/ACCEPTANCE.md](docs/ACCEPTANCE.md).
+## Current limitations and validation
 
-## Сборка и исходники
+- Hardware validation is limited to Windows and an RTX 5070. No AMD, Intel or second-GPU validation has been completed.
+- A real 60-minute game session completed, including dimension changes, world re-entry, shader reloads, rain and thunder. Historical native Java/OpenGL crashes are not declared universally fixed.
+- Three accepted pairs of repeated FPS runs covered nine scenes, including dense clouds and views inside the layer. The strict frame-time/FPS comparison passed in **2 of 9 scenes**; acceptance is incomplete. No guaranteed FPS or zero-cost claim is made.
+- A 4096 density atlas uses **1 GiB VRAM for its two Iris images alone**, excluding other game, shader and terrain resources. Dense cloud interiors can be expensive. Requested and effective atlas sizes are shown in diagnostics.
+- Unsupported shader interfaces retain their original clouds. Check diagnostics if Cloudscape is inactive.
+- Abnormal exits can lose weather-phase changes since the last save.
 
-Единственные актуальные исходники этой версии — `src/main` в корне проекта.
-`compat`, `archive` и `experiments` содержат историю и не участвуют в сборке.
-Старые эксперименты 0.8.3 сохранены в `archive/before-rc-*`.
+The [acceptance report](docs/ACCEPTANCE.md) records successful and unsuccessful measurements. All 39 Java classes and 11 rendering resources in the candidate JAR are byte-identical to the accepted baseline; only the version metadata changed. This does not turn incomplete timing acceptance into a pass.
 
-Нужны PowerShell 7 и JDK 25. Зависимости устанавливаются отдельно; lock-файл
-содержит относительные пути и SHA256. Имена базовых каталогов передаются явно:
+## Build from source
+
+Canonical production sources are in `src/main`. Install **PowerShell 7 and JDK 25** and separately obtain the Minecraft/Iris libraries described by [dependencies.lock.json](dependencies.lock.json). The lock uses relative paths and hashes; third-party binaries are not redistributed here.
 
 ```powershell
-./build.ps1 -MinecraftHome 'D:/Minecraft' -Profile 'D:/Minecraft/versions/MyProfile' -JavaHome 'D:/Java/jdk-25' -BuildLabel rc1
-./check.ps1 -MinecraftHome 'D:/Minecraft' -Profile 'D:/Minecraft/versions/MyProfile' -JavaHome 'D:/Java/jdk-25' -BuildLabel rc1
+./build.ps1 -MinecraftHome 'D:/Minecraft' -Profile 'D:/Minecraft/versions/MyProfile' -JavaHome 'D:/Java/jdk-25' -BuildLabel local1
+./check.ps1 -MinecraftHome 'D:/Minecraft' -Profile 'D:/Minecraft/versions/MyProfile' -JavaHome 'D:/Java/jdk-25' -BuildLabel local1
 ```
 
-Профиль должен содержать клиент 26.3 и Iris указанной версии, каталог Minecraft —
-библиотеки из `dependencies.lock.json`. Клиентский JAR можно положить под именем
-`Cloudscape 26.3.jar` в выбранном профиле независимо от имени его каталога.
-Скрипт проверяет каждый хеш; ничего не скачивает и не переписывает в профиле.
-Каждая сборка требует новое имя BuildLabel. Времена ZIP-записей фиксированы;
-повторяемость JAR проверяется отдельно. Проверки SourceParity требуют
-дополнительный `-ReferenceJar` с архивным 0.5.5 и при его отсутствии явно пропускаются.
+Use your own paths. The profile must contain the tested Iris version and the 26.3 client JAR at the relative path recorded in the lock; the client filename is `Cloudscape 26.3.jar` independently of the profile directory's name. Scripts verify dependency hashes and do not download or rewrite the installed profile. Use a fresh `BuildLabel` to preserve earlier evidence. The accepted build used JDK 25.0.2+10; byte-for-byte reproduction requires the same compiler.
 
-Игровой стенд отделён от JAR мода. GPU-прогоны выполняются последовательно;
-запись видео отделена от измерений FPS. См. [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+`check.ps1` runs the CPU validation suites. Source-parity checks require a separately retained reference JAR and are explicitly skipped if it is absent. Eight hours of CPU weather simulation is not eight hours of gameplay. GPU validation is a separate, sequential workflow requiring your own game files; see [development notes](docs/DEVELOPMENT.md).
 
-## Лицензия и сообщения об ошибках
+## Screenshots and credits
 
-Собственный код Cloudscape — MIT, см. [LICENSE](LICENSE).
-Генеративные ИИ-инструменты внесли существенный вклад в код, документацию и
-тексты страниц. Это первый публичный снимок исходников; прежняя локальная история
-разработки не представляется как история публичных коммитов.
-Minecraft, Iris, Sodium, Fabric и Complementary устанавливаются отдельно и
-распространяются по собственным лицензиям. Это неофициальное дополнение.
-В дистрибутив не входят чужие шейдерпаки, игровые библиотеки или миры.
+![Cloud formations above the coast](docs/images/02-daylight.png)
 
-Исходники: [GitHub](https://github.com/AlexDarkStalker2002/cloudscape-volumetric).
-Сообщения об ошибках: [Issues](https://github.com/AlexDarkStalker2002/cloudscape-volumetric/issues).
-Для отчёта используйте [docs/BUG_REPORT.md](docs/BUG_REPORT.md): версии,
-GPU/драйвер, лог, конфиг и шаги воспроизведения. Релизный кандидат ещё не
-опубликован на мод-площадках; открытые исходники не означают завершение приёмки.
+![Cloud underside](docs/images/03-from-below.png)
+
+These are real Minecraft framebuffer captures with Cloudscape 0.5.7-rc.1, **Complementary Reimagined r5.9.3** and **Distant Horizons 3.3.4**, using high settings in a separate filming profile. No generative image editing or invented cloud shapes were added. Wider scene lighting, water and atmospheric effects come from Complementary. The showcase's frame-by-frame 4K/60 capture demonstrates appearance, not live 4K/60 FPS performance.
+
+Cloudscape is an unofficial add-on. Complementary by EminGT and its contributors, Iris, Sodium, Fabric and Minecraft are separate projects with their own licenses. No shader packs, game libraries, launchers or worlds are included. Cloudscape's own code is under [MIT](LICENSE).
+
+**Development disclosure:** generative AI tools contributed substantially to the code, documentation and page text. This repository is the first public source snapshot; it does not fabricate the local development history or imply that mod-hosting moderation has approved the project.
+
+## Bugs and contributions
+
+Use [GitHub Issues](https://github.com/AlexDarkStalker2002/cloudscape-volumetric/issues) with the bug-report template. Include exact versions, GPU/driver, reproduction steps and relevant logs; remove account data, tokens and private server addresses. For FPS reports include resolution, frame cap/VSync, cloud settings, atlas size and view distances. See [the report guide](docs/BUG_REPORT.md).
+
+The RC freezes cloud shapes, rendering quality, defaults and Java/GLSL payload. Discuss changes that would alter those before implementation, and retain failed measurements rather than relaxing acceptance criteria after seeing results.
